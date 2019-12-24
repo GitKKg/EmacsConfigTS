@@ -26,12 +26,15 @@
 ;;
 ;;; Code:
 
-;; Kyle added
+;; Kyle changed
+;; Kyle del,use (require 'perspective) to replace desktop
 ;; save/restore opened files and windows config
 (setq desktop-save-mode t) ;; 0 for off
-;; (setq subword-mode nil) ;; Kyle ,here takes no effect
-(desktop-read "~/.emacs.d/desktop.save")
-;;(setq desktop-restore-frames t)
+;;(desktop-read "~/.emacs.d/desktop.save")
+(setq desktop-restore-frames t)
+
+;; Kyle added , make M-f series op on whole words
+(setq subword-mode nil)
 
 (defgroup my nil
   "Personal Emacs configurations."
@@ -45,7 +48,7 @@
   "Set user email address."
   :type 'string)
 
-(defcustom my-proxy "127.0.0.1:1087"
+(defcustom my-proxy "127.0.0.1:5678"
   "Set network proxy."
   :type 'string)
 

@@ -26,6 +26,11 @@
 ;;
 ;;; Code:
 
+;; Kyle added for desktop save ,read,changdir
+;;(use-package perspective)
+;;(require 'perspective)
+;; where is persp-state-save?!
+
 ;; Display available keybindings in popup
 (use-package which-key
   :diminish which-key-mode
