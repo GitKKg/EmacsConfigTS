@@ -29,10 +29,10 @@
 (eval-when-compile
   (require 'init-const))
 
-;; Encoding syste
-(set-language-environment "UTF-8")
+;; Encoding system
+(set-language-environment 'utf-8)
 (set-default-coding-systems 'utf-8)
-
+(set-terminal-coding-system 'utf-8)
 ;; Explicitly set the prefered coding systems to avoid annoying prompt
 ;; from emacs (especially on Microsoft Windows)
 (prefer-coding-system 'utf-8)
