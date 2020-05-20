@@ -93,8 +93,8 @@
 (require 'init-web)
 (require 'init-elm)
 (require 'init-yaml)
-;; Restore
-;; (require 'init-restore)
+
+(require 'init-PureScript)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init.el ends here
