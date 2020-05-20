@@ -41,7 +41,7 @@
              (flycheck-mode)
              (turn-on-purescript-indentation))))
 
-(provide 'init-psc-ide)
+(provide 'init-PureScript)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init-PureScript.el ends here
