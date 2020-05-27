@@ -31,15 +31,17 @@
 ;; just like M-x package-install
 (use-package purescript-mode)
 
+(use-package psci)
+
 ;; exposing the compilers IDE support
-(use-package psc-ide
-  :init
-  (add-hook 'purescript-mode-hook
-           (lambda ()
-             (psc-ide-mode)
-             (company-mode)
-             (flycheck-mode)
-             (turn-on-purescript-indentation))))
+;; (use-package psc-ide
+;;   :init
+;;   (add-hook 'purescript-mode-hook
+;;            (lambda ()
+;;              (psc-ide-mode)
+;;              (company-mode)
+;;              (flycheck-mode)
+;;              (turn-on-purescript-indentation))))
 
 (provide 'init-PureScript)
 
