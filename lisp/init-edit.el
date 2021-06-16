@@ -323,8 +323,8 @@ _m_: smart
       (cl-loop for key-char from 33 to 126
                do (let ((key (format "%s%s" modifier (string key-char))))
                     (global-set-key (kbd key) handler)))))
-;;Kyle change H to s for ubuntu
-(my-install-avy-with-modifier "C-H-" #'avy-goto-word-1))
+;;Lore change H to s for ubuntu
+(my-install-avy-with-modifier "C-s-" #'avy-goto-word-1))
 
 ;; Other key chords (should already be enabled in init-package.el)
 (use-package key-chord
