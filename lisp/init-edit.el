@@ -364,6 +364,12 @@ _m_: smart
 
 (use-package all-the-icons)
 
+
+;;after install pdf-tools,must run pdf-tools-install to complete installing
+(use-package pdf-tools)
+(pdf-tools-install)
+(use-package pdfgrep)
+
 (provide 'init-edit)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
