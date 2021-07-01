@@ -46,6 +46,7 @@
               ("M-." . helm-gtags-find-tag)
               ("M-," . helm-gtags-pop-stack)
               ("M-?" . helm-gtags-find-rtag)
+              ("C-M-?" . helm-gtags-find-symbol);; only for variable
               ("M-\"" . helm-gtags-show-stack);; actually more useful than just pop stack
               ("M-]" . helm-gtags-find-pattern)
               ))
