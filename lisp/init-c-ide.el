@@ -55,4 +55,36 @@
   (cflow-mode)
   )
 
+(use-package function-args)
+(fa-config-default)
+
+;; takes no effect ,still can't overwrite M-o defined in function-args
+;; (eval-after-load 'function-args
+;;   '(progn
+;;      (define-key function-args-mode-map (kbd "<M-o>") nil)
+;;      )
+;;   )
+
+;; Use yourown minor mode to overwrite keymap defined in other minor mode
+(defvar my-keys-minor-mode-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "M-o") 'ace-window)
+    (define-key map (kbd "M-+") 'moo-complete)
+    map)
+  "my-keys-minor-mode keymap.")
+
+(define-minor-mode my-keys-minor-mode
+  "A minor mode so that my key settings override annoying major modes."
+  :init-value t
+  :lighter " my-keys")
+
+(my-keys-minor-mode 1)
+
+(use-package stickyfunc-enhance
+  :init  (add-hook 'helm-gtags-mode-hook 'global-semantic-stickyfunc-mode)
+  :config
+;(add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
+  )
+;(setq global-semantic-stickyfunc-mode t)
+
 (provide 'init-c-ide)
