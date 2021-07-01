@@ -95,6 +95,7 @@
 (require 'init-yaml)
 
 (require 'init-remote)
+(require 'init-c-ide)
 
 
 

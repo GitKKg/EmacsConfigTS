@@ -86,6 +86,10 @@
 (if (file-exists-p custom-file)
     (load custom-file))
 
+
+;; increase warnning trigger for large files to 500MB
+(setq large-file-warning-threshold (* (* 1024 1024 ) 500))
+
 (provide 'init-custom)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
