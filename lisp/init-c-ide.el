@@ -81,10 +81,15 @@
 (my-keys-minor-mode 1)
 
 (use-package stickyfunc-enhance
-  :init  (add-hook 'helm-gtags-mode-hook 'global-semantic-stickyfunc-mode)
-  :config
-;(add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
+  ;; :init (require 'stickyfunc-enhance) ;; work too
   )
-;(setq global-semantic-stickyfunc-mode t)
+(add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
+(add-to-list 'semantic-default-submodes 'global-semantic-highlight-func-mode)
+(add-to-list 'semantic-default-submodes 'global-semantic-idle-local-symbol-highlight-mode)
+(add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode)
+(semantic-mode 1)
+(require 'stickyfunc-enhance)
+;;(global-semantic-idle-summary-mode 1)
+
 
 (provide 'init-c-ide)
